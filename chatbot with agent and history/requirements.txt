@@ -1,0 +1,8 @@
+langchain
+langchain-community
+langchainhub
+langchain_groq
+langchain-chroma
+bs4
+dotenv
+streamlit

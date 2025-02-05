@@ -1,0 +1,3 @@
+sentence-transformers
+duckduckgo-search
+langchain-community

@@ -1,0 +1,6 @@
+requests
+dotenv
+streamlit
+langchain
+langchain_groq
+langchain_core

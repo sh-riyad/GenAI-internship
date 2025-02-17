@@ -1,1 +1,12 @@
+<<<<<<< HEAD
 .env".env" 
+=======
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+>>>>>>> b6d9743 (Reconnect local directory and commit changes)

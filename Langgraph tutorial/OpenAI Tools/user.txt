@@ -1,0 +1,165 @@
+====================================
+         USER PROFILE DATA
+====================================
+
+Basic Information:
+------------------
+Name: Alex Smith
+Username: midcoder_alex
+Email: alex.smith@example.com
+Location: Austin, TX, USA
+
+Competitive Programming Ratings:
+----------------------------------
+- Codeforces:
+    Rating: 1020
+    Recent Contest Rank: Top 50%
+    Strengths: Basic implementation, problem solving fundamentals
+    Weaknesses: Advanced data structures, dynamic programming
+
+- Codechef:
+    Rating: 980
+    Recent Contest Performance: Steady participation with gradual improvement
+    Strengths: Mathematical problems, beginner algorithm challenges
+    Weaknesses: Graph algorithms, optimization problems
+
+- AtCoder:
+    Rating: 850
+    Recent Performance: Participates in beginner to intermediate contests
+    Strengths: Logical thinking, basic problem solving
+    Weaknesses: Advanced combinatorics and optimization
+
+- LeetCode:
+    Streak: 15 days
+    Success Rate: 65%
+    Focus: Data structures, array and string problems
+
+Daily Routine & Practice Schedule:
+------------------------------------
+- Daily Activities:
+    - Solve 1 competitive programming problem
+    - Review algorithm concepts (e.g., sorting, recursion, simple DP)
+    - Spend 30 minutes on code review and debugging practice
+- Weekly Activities:
+    - Participate in at least one contest on Codeforces or Codechef
+    - Analyze contest performance to identify areas for improvement
+    - Watch one tutorial on topics such as basic graph theory or dynamic programming
+
+Learning Preferences:
+---------------------
+- Preferred Programming Languages:
+    * C++
+    * Python
+- Topics of Interest:
+    * Basic Dynamic Programming
+    * Breadth-first Search (BFS) and Depth-first Search (DFS)
+    * Greedy Algorithms for beginners
+    * Fundamental Data Structures (Arrays, Stacks, Queues)
+- Areas for Improvement:
+    * Mastering dynamic programming concepts
+    * Deepening understanding of graph traversal techniques
+    * Learning optimization strategies for handling larger inputs
+
+Recent Achievements & Goals:
+-----------------------------
+- Achievements:
+    * Completed several beginner-level contests with consistent improvement.
+    * Maintained a daily problem-solving streak for the past 30 days.
+    * Solved over 70% of attempted problems in practice sessions.
+- Current Goals:
+    * Improve Codeforces rating to over 1200 by tackling intermediate problems.
+    * Strengthen understanding of dynamic programming and graph algorithms.
+    * Increase LeetCode success rate by focusing on data structure challenges.
+
+Sample problem that the user solved:
+------------------------------------
+Problem:
+--------
+    A. Square String?
+    time limit per test1 second
+    memory limit per test256 megabytes
+    A string is called square if it is some string written twice in a row. For example, the strings "aa", "abcabc", "abab" and "baabaa" are square. But the strings "aaa", "abaaab" and "abcdabc" are not square.
+
+    For a given string s
+    determine if it is square.
+
+    Input
+    The first line of input data contains an integer t
+    (1≤t≤100
+    ) —the number of test cases.
+
+    This is followed by t
+    lines, each containing a description of one test case. The given strings consist only of lowercase Latin letters and have lengths between 1
+    and 100
+    inclusive.
+
+    Output
+    For each test case, output on a separate line:
+
+    YES if the string in the corresponding test case is square,
+    NO otherwise.
+    You can output YES and NO in any case (for example, strings yEs, yes, Yes and YES will be recognized as a positive response).
+
+    Example:
+    Input:
+    10
+    a
+    aa
+    aaa
+    aaaa
+    abab
+    abcabc
+    abacaba
+    xxyy
+    xyyx
+    xyxy
+    Output:
+    NO
+    YES
+    NO
+    YES
+    YES
+    YES
+    NO
+    NO
+    NO
+    YES
+
+User Solution:
+--------------
+    #include<string>
+    #include<iostream>
+
+    using namespace std;
+    int main()
+
+    {
+        int t;
+        cin>>t;
+        while(t--){
+        string s;
+        cin>>s;
+        int flg=0;
+        if(s.length()%2!=0) cout<<"No"<<endl;
+        else{
+            int half=s.length()/2;
+            for(int i=0,j=half; i<half; i++,j++){
+                if(s[i] != s[j])
+                { 
+                flg=1; break;
+                }
+            }
+            if(flg) cout<<"No"<<endl;
+            else cout<<"Yes"<<endl;
+        }
+        }
+    }
+
+
+Additional Notes:
+-----------------
+- Prefers learning through hands-on practice and step-by-step code walkthroughs.
+- Enjoys clear, detailed explanations of problem-solving techniques.
+- Keeps a personal log of mistakes and lessons learned after each contest for continuous improvement.
+
+====================================

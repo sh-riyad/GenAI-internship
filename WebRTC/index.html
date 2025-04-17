@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebRTC + OpenAI</title>
+  </head>
+  <body>
+    <h2>🎙️ Speak to AI</h2>
+    <button onclick="start()">Start</button>
+
+    <script>
+      async function start() {
+        const stream = await navigator.mediaDevices.getUserMedia({
+          audio: true,
+          video: false,
+        });
+        const pc = new RTCPeerConnection();
+
+        stream.getTracks().forEach((track) => pc.addTrack(track, stream));
+
+        const offer = await pc.createOffer();
+        await pc.setLocalDescription(offer);
+
+        const response = await fetch("/offer", {
+          method: "POST",
+          body: JSON.stringify(pc.localDescription),
+          headers: { "Content-Type": "application/json" },
+        });
+
+        const answer = await response.json();
+        await pc.setRemoteDescription(answer);
+      }
+    </script>
+  </body>
+</html>
